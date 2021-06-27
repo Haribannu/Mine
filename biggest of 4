@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class More
+{
+public static void main(String args[])
+{
+
+Scanner s=new Scanner(System.in);
+System.out.println("enter a value");
+int a=s.nextInt();
+System.out.println("enter b value");
+int b=s.nextInt();
+System.out.println("enter c value");
+int c=s.nextInt();
+System.out.println("enter d value");
+int d=s.nextInt();
+if((a>b)&&(a>c)&&(a>d))
+{
+	System.out.println("a is big");
+}
+else if((b>c)&&(b>a)&&(b>d))
+{
+	System.out.println("b is big");
+}
+else if((c>a)&&(c>b)&&(c>d))
+{
+	System.out.println(" c is big");
+}
+else 
+	System.out.println("d is big");
+}
+}
+
+output:enter a value
+43
+enter b value
+23
+enter c value
+74
+enter d value
+45
+ c is big
