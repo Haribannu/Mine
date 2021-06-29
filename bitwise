@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Type
+{
+public static void main(String args[])
+{
+int num;
+Scanner s=new Scanner(System.in);
+System.out.println("enter the value:");
+num=s.nextInt();
+if((num & 1)==0)
+System.out.println("even");
+else
+System.out.println("odd");
+}
+}
+--------------------------------------------
+output:
+enter the value:
+13
+odd
+enter the value:
+12
+even
