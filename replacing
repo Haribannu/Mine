@@ -1,0 +1,45 @@
+import java.util.*;
+class change
+{
+public static void main(String args[])
+{
+int x,y,i=1,count=0,rem;
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+n=sc.nextInt();
+System.out.println("enter x value");
+x=sc.nextInt();
+System.out.println("enter y value");
+y=sc.nextInt();
+while(n>0)		
+{
+	rem=n%10;			//4	//3    //2  //1
+	if(rem==x)
+		count+=y*i;//234+5*1000=5234
+	else
+		count+=rem*i;		//4 //34 //234
+i*=10;					//10//100//1000
+n/=10;					//123//12//1
+
+}
+System.out.println(count);
+}
+}
+======================================
+output:
+enter n value
+16719
+enter x value
+1
+enter y value
+8
+86789
+=======
+enter n value
+234278
+enter x value
+2
+enter y value
+5
+534578
