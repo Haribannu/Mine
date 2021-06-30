@@ -1,0 +1,26 @@
+ import java.util.*;
+class harsh{
+
+     public static void main(String args[])
+    {
+	int n, y, count = 0,rem;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter n value : ");
+        n=sc.nextInt();
+        while(n>0)
+        {
+            rem =n%10;
+            count+=rem;
+            n/=10;
+        }
+         
+        if(n%count==0)
+            System.out.println(n+" is a Harshad Number.");
+        else
+            System.out.println(n+" is not a Harshad Number.");      
+    }
+}
+========================
+output:
+enter n value : 156
+ is a Harshad Number.
