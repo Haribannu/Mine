@@ -1,0 +1,33 @@
+class Solution {
+    public int subtractProductAndSum(int n) {
+        
+
+	int res=1,rem,count=0,tot;
+	System.out.println("enter n value");
+	Scanner sc=new Scanner(System.in);
+	
+	
+	while(n>0)
+	{
+		rem=n%10;
+		res*=rem;
+		count+=rem;
+		n/=10;
+	}
+	
+tot=res-count;
+	return tot;
+    }
+}
+=====================
+your input:234
+stdout:enter n value
+
+Output
+15
+Expected
+15
+
+
+        
+    
