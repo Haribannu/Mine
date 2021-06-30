@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Integer
+{
+public static void main(String args[])
+{
+int n,rem,rev=0;
+System.out.println("enter  value");
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+while(n!=0)
+{
+rem=n%10;
+rev=rev*10+rem;
+n/=10;
+}
+System.out.println(rev);
+}
+}
+===================================================
+output:
+enter  value
+1456
+6541
+enter  value
+-123
+-321
