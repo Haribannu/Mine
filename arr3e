@@ -1,0 +1,52 @@
+import java.util.*;
+class arr
+{
+public static void main(String ar[])
+{
+int n;
+
+System.out.println("enter n value");
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+for(int i=1;i<=n;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print("*" );
+}
+System.out.println();
+}                           //increasing from 1 to 5
+
+for(int i=1;i<=n;i++)
+{
+for(int j=i;j<=n-1;j++)
+{
+System.out.print("*");
+}
+
+System.out.println();               //decreasing from 4 to 1
+}
+}
+}
+============================
+output:
+enter n value
+5
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+enter n value
+4
+*
+**
+***
+****
+***
+**
+*
