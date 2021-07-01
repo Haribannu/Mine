@@ -1,0 +1,29 @@
+import java.util.*;
+class arr
+{
+public static void main(String ar[])
+{
+int n;
+System.out.println("enter n value");
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+for(int i=1;i<=n;i++)//1<=5
+{
+for(int j=5;j>=i;j--)//5>=1//4>=2//3>=5//2>=5//1>=5
+{
+System.out.print("*");
+}
+
+System.out.println();
+}
+}
+}
+=======================
+output:
+enter n value
+5
+*****
+****
+***
+**
+*
