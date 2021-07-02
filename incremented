@@ -1,0 +1,33 @@
+import java.util.*;
+class ass22
+{
+public static void main(String args[])
+{
+int n;
+System.out.println("enter the n value");
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+if(n%4==0)
+{
+System.out.println("value is increased by 1");
+n++;
+System.out.println(n);
+}
+else
+{
+n--;
+System.out.println("value is decreased by 1");
+System.out.println(n);
+}
+}
+}
+===========================
+output:
+enter the n value
+56
+Here the num you incremented
+57
+enter the n value
+33
+value is decreased by 1
+32
