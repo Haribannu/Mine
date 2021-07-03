@@ -1,0 +1,31 @@
+import java.util.*;
+class auto
+{
+public static void main(String args[])
+{
+int n,rem=0,rem1=0;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int sq=n*n;
+while(n>0)
+{
+rem=n%10;
+rem1=sq%10;
+n/=10;
+sq/=10;
+}
+
+if(rem==rem1)
+System.out.println("automorphic number");
+else
+System.out.println("not automorphic");
+}
+}
+=====================
+output:
+76
+automorphic number
+25
+automorphic number
+7
+not automorphic
