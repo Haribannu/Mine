@@ -1,0 +1,53 @@
+import java.util.*;
+class hacker3
+{
+public static void main(String args[])
+{
+int n;
+
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int size=n*2-1;
+char[][] a=new char[size][size];
+int start=0,end=size-1;
+char ch='A';
+while(n!=0)
+{
+for(int i=start;i<=end;i++)
+{
+for(int j=start;j<=end;j++)
+{
+if(i==start || i==end || j==start ||j==end)
+a[i][j]=ch;
+}
+}
+
+n--;
+ch++;
+start++;
+end--;
+
+}
+
+for(int i=0;i<size;i++)
+{
+for(int j=0;j<size;j++)
+{
+
+System.out.print(a[i][j]+" ");
+}
+System.out.println();
+}
+}
+}
+
+==============
+output:
+4
+A A A A A A A
+A B B B B B A
+A B C C C B A
+A B C D C B A
+A B C C C B A
+A B B B B B A
+A A A A A A A
