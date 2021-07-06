@@ -1,0 +1,31 @@
+import java.util.*;
+class sumindex
+{
+public static void main(String args[])
+{
+int sum=0,i;
+Scanner sc=new Scanner(System.in);
+int left=sc.nextInt();
+int right=sc.nextInt();
+int a[]={3,10,10,3,4,5,4,10};
+int n=a.length;
+
+for(i=left;i<=right;i++)
+{
+a[i]+=0;
+System.out.print(a[i]+" ");
+sum=sum+a[i];
+}
+System.out.println("the sum of nuumbers in given range is "+sum);
+
+}
+}
+==============
+output:
+2
+4
+10 3 4 the sum of nuumbers in given range is 17
+============
+0
+0
+3 the sum of nuumbers in given range is 3
