@@ -1,0 +1,50 @@
+import java.util.*;
+class swapmatrices
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int r=s.nextInt();
+int c=s.nextInt();
+System.out.println("enter fst matrix values");
+int a[][]=new int[r][c];
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+a[i][j]=s.nextInt();
+}
+}
+int n=a.length;
+int start=0,end=n-1;
+for(int i=start;i<r;i++)
+{
+for(int j=start;j<c;j++)
+{
+int temp=a[i][start];
+a[i][start]=a[i][end];
+a[i][end]=temp;
+}
+}
+System.out.println("sorting of each row");
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+System.out.print(a[i][j]+" ");
+}
+System.out.println();
+}
+}
+}
+=====================
+3
+3
+enter fst matrix values
+10 15 13
+11 8 5
+9 4 3
+sorting of each row
+13 15 10
+5 8 11
+3 4 9
