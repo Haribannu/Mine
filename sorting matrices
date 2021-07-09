@@ -1,0 +1,76 @@
+import java.util.*;
+class swapmatrices
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int r=s.nextInt();
+int c=s.nextInt();
+System.out.println("enter fst matrix values");
+int a[][]=new int[r][c];
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+a[i][j]=s.nextInt();
+}
+}
+System.out.println("enter second matrix values");
+int b[][]=new int[r][c];
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+b[i][j]=s.nextInt();
+}
+}
+int t;
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+t=a[i][j];
+a[i][j]=b[i][j];
+b[i][j]=t;
+}
+}
+System.out.println("the fst sorted matrix");
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+System.out.print(a[i][j]+" ");
+}
+System.out.println();
+}
+System.out.println("the second sorted matrix");
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+System.out.print(b[i][j]+" ");
+}
+System.out.println();
+}
+}
+}
+================================
+3
+3
+enter fst matrix values
+10 15 13
+11 8 5
+9 4 3
+enter second matrix values
+1 44 6
+87 65 43
+54 91 12
+the fst sorted matrix
+1 44 6
+87 65 43
+54 91 12
+the second sorted matrix
+10 15 13
+11 8 5
+9 4 3
+
