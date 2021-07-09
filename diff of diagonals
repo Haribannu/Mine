@@ -1,0 +1,54 @@
+import java.util.*;
+class anti
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int r=s.nextInt();
+int c=s.nextInt();
+System.out.println("enter matrix values");
+int arr[][]=new int[r][c];
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+arr[i][j]=s.nextInt();
+}
+}
+int sum=0;
+System.out.println("sum of diagonal");
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+if(i==j)
+sum+=arr[i][j];
+}
+}
+System.out.println(sum);
+int n=arr.length-1;
+int anti=0;
+System.out.println("sum of anti diagonal");
+for(int i=0;i<=n;i++)
+{
+anti+=arr[i][n-i];
+}
+System.out.println(anti);
+System.out.print("diff of sum and anti is=");
+int result=sum-anti;
+System.out.println(result);
+
+}
+}
+==============================================
+3
+3
+enter matrix values
+10 15 13
+11 8 5
+9 4 3
+sum of diagonal
+21
+sum of anti diagonal
+30
+diff of sum and anti is=-9
