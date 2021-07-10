@@ -1,0 +1,20 @@
+import java.util.*;
+class Solution {
+    public static void main(String args[])
+ {
+        Scanner sc=new Scanner(System.in);
+System.out.println("enter string");
+
+	String str=sc.next();
+        int n=str.length();
+for(int i=0;i<n;i++)
+{
+char ch=str.charAt(i);
+if(Character.isUpperCase(ch))
+System.out.print(Character.toLowerCase(ch));
+        }
+    }
+}
+=================
+ADITYA
+aditya
