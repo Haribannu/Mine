@@ -1,0 +1,28 @@
+import java.util.*;
+class main
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+String str=sc.next();
+char ch[]=str.toCharArray();
+boolean f=true;
+for(int i0;i<s.length;i++)
+{
+if(ch[i]==' ')
+{
+f=true;
+continue;
+}
+if(flag)
+{
+if(ch[i]>=97&&ch[i]<=122)
+{
+ch[i]-=32;
+}
+}
+f=false;
+}
+System.out.println(str);
+}
+}
