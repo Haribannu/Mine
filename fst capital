@@ -1,0 +1,16 @@
+import java.util.*;
+class main
+{
+public static void main(String args[])
+{
+String s1;
+String str="geeks";
+String fst=str.substring(0,1);
+String rem=str.substring(1,str.length());
+fst=fst.toUpperCase();
+str=fst+rem;
+System.out.println(str);
+}
+}
+=======================
+Geeks
