@@ -1,0 +1,17 @@
+import java.util.*;
+class main
+{
+public static void main(String args[])
+{
+String s1;
+String str="geeks";
+StringBuilder i=new StringBuilder();
+char ch1[]=str.toCharArray();
+Arrays.sort(ch1);
+i.reverse();
+
+System.out.println(ch1);
+}
+}
+======================
+eegks
