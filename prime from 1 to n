@@ -1,0 +1,32 @@
+import java.util.*;
+class primeone
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value:");
+int n=sc.nextInt();
+primeNos(n);
+}
+static void primeNos(int n)
+{
+String pn="";
+int count=0;
+for(int i=2;i<=n;i++)
+{
+for(int num=2;num<i;num++)
+{
+if(i%num==0)
+{
+count+=1;
+}
+}
+if(count==0)
+System.out.print(i+" ");
+count=0;
+}
+}
+}
+==============
+enter n value:21
+2 3 5 7 11 13 17 19
