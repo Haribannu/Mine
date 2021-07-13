@@ -1,0 +1,20 @@
+import java.util.*;
+class number
+{
+	public static void display()
+	{
+		String s1;
+		Scanner sc=new Scanner(System.in);
+		s1=sc.next();
+		char a[]=s1.toCharArray();
+		s1.split(" ");
+		System.out.println(a.length);
+	}
+	public static void main(String args[])
+	{
+		number.display();//calling a method
+	}
+}
+==============
+This is Coding Class
+4
