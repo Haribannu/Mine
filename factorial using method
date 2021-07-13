@@ -1,0 +1,28 @@
+import java.util.*;
+class factorial
+{
+public static void display()
+{
+System.out.println("");
+fact();//calling a method
+}
+public static void fact()
+{
+int f=1;
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+for(int i=1;i<=n;i++)
+{
+f=f*i;
+}
+
+System.out.println("factorial of "+n+" is" +f);
+}
+public static void main(String args[])
+{
+factorial.display();//calling a method
+}
+}
+=========================
+5
+factorial of5is120
