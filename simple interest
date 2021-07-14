@@ -1,0 +1,26 @@
+import java.util.*;
+class simpleinterest
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		float p=sc.nextFloat();
+		float t=sc.nextFloat();
+		float r=sc.nextFloat();		
+		simple(p,t,r);
+	}
+static void simple(float p,float t,float r)
+{
+	float si=(p*t*r)/100;
+		System.out.println("simple interest is");
+		System.out.println(si+" ");
+		
+	
+}
+}
+===========================
+5000.0
+2.00
+3.00
+simple interest is
+300.0
