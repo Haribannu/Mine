@@ -1,0 +1,36 @@
+import java.util.*;
+class frequencyofele
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" Enter size ");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("the array elements are");
+		for(int i=0;i<n;i++)
+		a[i]=sc.nextInt();
+		sc.nextLine().split(" ");
+		System.out.println("enter the key");
+		int k=sc.nextInt();
+		noofelements(a,n,k);
+	}
+static void noofelements(int a[],int n,int k)
+{
+	int f=0;
+	System.out.println("the frequency of element");
+	for(int i=0;i<n;i++)
+		if(a[i]==k)
+			f++;
+		System.out.println(f+" ");
+}
+}
+=================================
+ Enter size
+10
+the array elements are
+5 8 6 4 5 8 7 8 9 5
+enter the key
+5
+the frequency of element
+3
