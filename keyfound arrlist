@@ -1,0 +1,35 @@
+
+import java.util.*;
+class main
+{
+public int[] element(int[] a)
+{
+    int value;
+    ArrayList<Integer> b=new ArrayList<>();
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+value=sc.nextInt();
+b.add(10);
+b.add(20);
+b.add(30);
+b.add(40);
+int a[i]=b.addAll(b);
+for(int i=0;i<n;i++)
+{
+    if(a[i]==value)
+    {
+System.out.println("Element found");
+}
+else
+{
+System.out.println("not");
+}
+}
+return a;
+}
+}
+==============
+4
+20
+Element found
+
