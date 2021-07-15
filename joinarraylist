@@ -1,0 +1,51 @@
+import java.util.*;
+public class main
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+ArrayList<Integer> a=new ArrayList<>();
+a.add(10);
+a.add(20);
+a.add(30);
+a.add(40);
+System.out.println("Input:");
+System.out.println(a);
+ArrayList<Integer> b=new ArrayList<>();
+b.add(100);
+b.add(200);
+b.add(300);
+b.add(400);
+System.out.println(b);
+a.addAll(b);
+System.out.println("output:");
+System.out.println(a);
+ArrayList<String> c=new ArrayList<>();
+c.add("red");
+c.add("blue");
+c.add("green");
+c.add("pink");
+System.out.println("Input:");
+System.out.println(c);
+ArrayList<String> d=new ArrayList<>();
+d.add("white");
+d.add("yellow");
+d.add("pink");
+System.out.println(d);
+c.addAll(d);
+System.out.println("output:");
+System.out.println(c);
+
+}
+}
+===================
+Input:
+[10, 20, 30, 40]
+[100, 200, 300, 400]
+output:
+[10, 20, 30, 40, 100, 200, 300, 400]
+Input:
+[red, blue, green, pink]
+[white, yellow, pink]
+output:
+[red, blue, green, pink, white, yellow, pink]
