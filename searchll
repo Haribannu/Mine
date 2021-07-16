@@ -1,0 +1,34 @@
+
+    	import java.util.*;
+public class ExampleOfLinkedList
+{
+    public static void main(String args[])
+    {
+    	Scanner sc=new Scanner(System.in);
+    	System.out.println("enter n");
+    	int n=sc.nextInt();
+   
+        LinkedList<Integer> l = new LinkedList<Integer>();
+        for (int i= 0; i < n; i++) {
+        	l.add(sc.nextInt()); 
+        	}
+        System.out.println(l);
+        int key=sc.nextInt();
+         boolean isExists = l.contains(key);
+        if(isExists)
+        {
+            l.remove(key);
+        }
+        else
+        {
+            System.out.println("Element not found");
+        }
+        System.out.println(l);
+    }
+}  
+====================
+enter n
+5
+1 2 3 4 5
+2
+1 2 4 5
