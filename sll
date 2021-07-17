@@ -1,185 +1,63 @@
-
-    import java.util.*;
-class Node
+import java.util.*;
+class List
 {
-    int data;
-                Node link;
-                Node(int item)
-    {
-        data=item;
-        link=null;
-    }
-}
-class LinkedList
-{
-     Scanner s=new Scanner(System.in);
-    Node head,last;
-    LinkedList()
-    {
-        head=last=null;
-    }
-     public void create() // creating a linked list
-    {
-        int item;
-        while(true) 
-        {
-            System.out.println("Enter an element to insert: If No more elements then enter -1");
-            item=s.nextInt();
-            if(item==-1)
-            {
-                break;
-            }
-            else
-            {
-                Node temp=new Node(item);
-                if(head==null)
-                {
-                    head=temp;
-                    last=temp;
-                }
-                else
-                {
-                    last.link=temp;
-                    last=temp;
-                }
-            }
-        }
-    }
-    public void traverse() // visiting each and every node in linked list
-    {
-        Node temp=head;
-        while(temp!=null)
-        {
-            System.out.print(temp.data+"=>");
-            temp=temp.link;
-        }
-        System.out.println("null");
-    }
-    public int nodecount() // counting the number of nodes in linked list
-    {
-        Node temp=head;
-        int count=0;
-        while(temp!=null)
-        {
-            count++;
-            temp=temp.link;
-        }
-        return count;
-    }
-   
-    public void insert()
-    {
-        System.out.println("1. Begining");
-        System.out.println("2. Middle");
-        System.out.println("3. Ending");
-        System.out.print("Where you want to insert:");
-        int iopt=s.nextInt();
-        System.out.print("Enter element to insert:");
-        int ele=s.nextInt();
-        Node nodex=new Node(ele);
-        switch(iopt)
-        {
-            case 1:    nodex.link=head;
-                head=nodex;
-                break;
-            case 2:     System.out.print("In which position you want to insert:");
-                int place=s.nextInt();
-                if(place<1 || place>nodecount())
-                {
-                    System.out.println("Insertion not possible");
-                }
-                else
-                {
-                    Node temp=head;
-                    Node temp1=null;
-                    int i=1;
-                    while(i<place)                    
-                    {
-                        temp1=temp;
-                        temp=temp.link;
-                        i++;
-                    }
-                    temp1.link=nodex;
-                    nodex.link=temp;
-                }
-                break;
-            case 3:     last.link=nodex;
-                last=nodex;
-                break;
-            default: System.out.println("Invalid Input");
-        }
-    }
-    public void delete()
-    {
-        System.out.println("1. Begining");
-        System.out.println("2. Middle");
-        System.out.println("3. Ending");
-        System.out.print("Where you want to delete:");
-        int dopt=s.nextInt();
-        switch(dopt)
-        {
-            case 1:     head=head.link;
-                break;
-            case 2:    System.out.print("From which position you want to delete:");
-                int place=s.nextInt();
-                if(place<1 || place>nodecount())
-                {
-                    System.out.println("Deletion Not Possible");
-                }
-                else
-                {
-                    Node temp=head;
-                    Node temp1=null;
-                    int i=1;
-                    while(i<place)                    {
-                        temp1=temp;
-                        temp=temp.link;
-                        i++;
-                    }
-                    temp1.link=temp.link;
-                }
-                break;
-            case 3:     Node temp=head;
-                Node temp1=null;
-                while(temp.link!=null)
-                {
-                    temp1=temp;
-                    temp=temp.link;
-                }
-                temp1.link=null;
-                last=temp1;
-                break;
-            default: System.out.println("Invalid Input");
-        }
-    }
-}
-class SLL
-{
-    public static void main(String... args)
-    {
-        LinkedList l=new LinkedList();    
-        Scanner s=new Scanner(System.in);
-        int opt;
-        do
-        {
-            System.out.println("1. Create");
-            System.out.println("2. Insert");    
-            System.out.println("3. Delete");
-            System.out.println("4. Traverse");
-            System.out.println("5. Count");
-            System.out.println("6. Exit");
-            System.out.print("Select an operation:");
-            opt=s.nextInt();
-            switch(opt)
-            {
-                case 1: l.create(); break;
-                case 2: l.insert(); break;
-                case 3: l.delete(); break;
-                case 4: l.traverse(); break;
-                case 5: System.out.println("No.of Nodes = "+l.nodecount()); break;
-                case 6: System.exit(0); break;
-                default: System.out.println("Invalid Operation");
-            }
-        }while(opt<=6);
-    }
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		LinkedList<Integer> LL=new LinkedList<Integer>();
+		int opt=0;
+		do
+		{
+			System.out.println("1->begin insert");
+			System.out.println("2->End insert");
+			System.out.println("3->position insert");
+			System.out.println("4->begin delete");
+			System.out.println("5->end delete");
+			System.out.println("6->position delete");
+			System.out.println("7->display");
+			System.out.println("8->exit");
+			System.out.println("enter your choice");
+			opt=sc.nextInt();
+			switch(opt)
+			{
+				case 1:
+				System.out.println("enter value");
+				int a=sc.nextInt();
+				LL.addFirst(a);
+				break;
+				case 2:
+				System.out.println("enter a value");
+				int b=sc.nextInt();
+				LL.addLast(b);
+				break;
+				case 3:
+				System.out.println("enter index & value to be inserted");
+				int index=sc.nextInt();
+				int value=sc.nextInt();
+				LL.add(index,value);
+				break;
+				case 4:
+				LL.removeFirst();
+				break;
+				case 5:
+				LL.removeLast();
+				break;
+				case 6:
+				System.out.println("enter index value to remove an element");
+				int id=sc.nextInt();
+				LL.remove(id);
+				break;
+				case 7:
+				System.out.println(LL);
+				break;
+				case 8:
+				System.exit(0);
+				break;
+				default:
+				System.out.println("invalid option");
+			}
+		}
+			while(opt<=8);
+	}
+	
 }
