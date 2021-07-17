@@ -1,0 +1,21 @@
+import java.util.*;
+class demo
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+for(int i=0;i<n;i++)
+s.add(Integer.valueOf(sc.nextInt()));
+int x[]=new int[s.size()];
+Set<Integer> s=new HashSet<Integer>();
+for(Integer i:s)
+{
+if(s.contains(x[i]))
+System.out.print("true");
+s.add(x[i]);
+else
+System.out.print("false");
+}
+}
+}
