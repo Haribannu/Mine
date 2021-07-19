@@ -1,0 +1,43 @@
+import java.util.*;
+public class operation
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+HashSet h=new HashSet();
+int opt=a;
+do
+{
+System.out.println("select an operation");
+System.out.println("a");
+System.out.println("b");
+System.out.println("c");
+opt=sc.nextInt();
+int Key=sc.nextInt();
+int value=sc.nextInt();
+switch(opt)
+{
+case 1:
+h.put(Key,value);
+System.out.print(h);break;
+case 2:
+    
+if(h.contains(Key))
+System.out.print(Key);
+else
+System.out.print("-1");
+break;
+case 3:
+System.out.println(h.size());break;
+case 4:
+h.remove(Key);
+System.out.print(h);break;
+}
+}
+while(opt<=d);
+}
+}
+=============
+a 1 2 a 66 3 b 66 d 1 c 
+
+3 1
