@@ -1,0 +1,50 @@
+package dailyclasses;
+import java.util.Scanner;
+class Stack
+{
+int a[];
+int top;
+Stack(int n)// constructor
+{
+a=new int[n]; // n is size of the array
+top=-1;
+}
+void push(int ele) // insert elements into stack
+{
+if(top==a.length-1)
+System.out.println(" The stack is overflow ");
+else
+{
+a[++top]=ele;
+}
+}
+}
+public class Demo
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println(" Enter size of the stack ");
+int n=sc.nextInt(); // size of the stack
+Stack obj=new Stack(n); // obj is the object
+System.out.println(" Enter element into stack");
+int ele=sc.nextInt();
+obj.push(ele);
+int count=0,count1=0;
+for(int i=top;i>=0;i++)
+{
+    if(a[top]%2==0)
+    {
+        count+=1;
+    }
+    else
+    {
+        count1+=1;
+    }
+    if(count==count1)
+    System.out.println("balanced");
+    else
+    System.out.println("not balanced");
+}
+}
+}
