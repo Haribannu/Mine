@@ -1,0 +1,28 @@
+import java.util.*;
+public class Demo1
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println(" Enter size of the stack ");
+int n=sc.nextInt();
+Stack stack=new Stack(n);// size of the stack
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+insert(a,n);
+display();
+}
+public static void insert(int a[],int n)
+{
+for(int i=0;i<n;i++)
+stack.push(a[i]);
+}
+public static void display()
+{
+for(int i=0;i<n;i++)
+stack.display(a[i]);
+}
+}
+
+
