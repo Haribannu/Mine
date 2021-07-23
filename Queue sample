@@ -16,11 +16,11 @@ class MyQueue {
   /** Removes the element from in front of queue and returns that element. */
   public int pop() {
     while (!s.isEmpty()) {
-      revStack.push(s.pop());
+      r.push(s.pop());
     }
     int num = r.pop();
     while (!r.isEmpty()) {
-      stack.push(r.pop());
+      s.push(r.pop());
     }
     return num;
   }
@@ -28,11 +28,11 @@ class MyQueue {
   /** Get the front element. */
   public int peek() {
     while (!s.isEmpty()) {
-      revStack.push(s.pop());
+      r.push(s.pop());
     }
     int num = r.peek();
     while (!r.isEmpty()) {
-      stack.push(r.pop());
+      s.push(r.pop());
     }
     return num;
   }
