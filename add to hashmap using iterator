@@ -1,0 +1,39 @@
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) {
+
+Scanner sc=new Scanner(System.in);
+System.out.println("enter size");
+int n=sc.nextInt();
+String arr[]=new String[n];
+for(int i=0;i<n;i++)
+{
+arr[i]=sc.next();
+}
+HashMap<String,Integer> h=new HashMap<String,Integer>();
+
+
+for(int i=0;i<n;i++)
+{
+h.put(arr[i],arr[i].length());
+}
+Set set = h.entrySet();
+ Iterator itr = set.iterator();
+ System.out.println("result");
+while(itr.hasNext())
+{
+Map.Entry m = (Map.Entry)itr.next();
+System.out.print(m.getKey() + ": ");
+System.out.println(m.getValue());
+}
+}
+}
+====================
+enter size
+3
+hi hello java
+result
+helo: 4
+hi: 2
+java: 4
