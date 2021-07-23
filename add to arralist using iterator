@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+Scanner sc=new Scanner(System.in);
+System.out.println("enter size");
+int n=sc.nextInt();
+int[] arr=new int[n];
+for(int i=0;i<n;i++)
+arr[i]=sc.nextInt();
+ArrayList<Integer> al=new ArrayList<>();
+for(int i=0;i<n;i++)
+{
+al.add(arr[i]);
+}
+Iterator itr=al.iterator();
+System.out.println("result");
+while(itr.hasNext())
+{
+System.out.println(itr.next());
+}
+}
+}
+=================
+enter size 3
+1 2 3
+result
+1
+2
+3
