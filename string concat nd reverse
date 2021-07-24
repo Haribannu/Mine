@@ -1,0 +1,10 @@
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        // code here
+        String s=S1.concat(S2);
+        StringBuffer sb=new StringBuffer(s);
+        sb.reverse();
+        return sb.toString();
+    }
+    
+}
