@@ -1,0 +1,41 @@
+import java.util.*;
+import java.io.*;
+class TestClass { 
+static int myprime(int start,int end)
+{
+int sum=0;
+int primearray[]=new int[end+1];
+for(int i=0;i<=end;i++) 
+primearray[i]=1; 
+if(start==1)
+primearray[1]=0; 
+for(int p=2;p*p<=end;p++) //for(int p=2;p<=Math.sqrt(end);p++)
+{
+if(primearray[p]==1)
+for(int i=p*p;i<=end;i=i+p)//i=8,8<=6
+{
+primearray[i]=0;
+}
+}
+for(int j=start;j<=end;j++)
+{
+if(primearray[j]==1)
+sum=sum+j;
+}
+return sum;
+
+}
+public static void main(String args[] ) throws Exception {
+Scanner sc=new Scanner(System.in);
+int q=sc.nextInt();
+while(q>0)
+{
+int l=sc.nextInt();
+int r=sc.nextInt();
+long primesum=myprime(l,r);
+System.out.println(primesum);
+q--;
+}
+
+}
+}
